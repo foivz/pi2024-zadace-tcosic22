@@ -9,12 +9,13 @@ namespace Zadaca3.Models
     public class Narudzba
     {
         public int IdStudenta { get; set; }
-        public string OdabraniMeni { get; set; }
-        public int VrijemePripreme { get; set; }
+        public int OdabraniMeni { get; set; }
+        public string VrijemePripreme { get; set; }
         public double Cijena { get; set; }
         public string Status { get; set; }
-        public bool IskoristenKupon { get; set; }
+        public string IskoristenKupon { get; set; }
         public string Datum { get; set; }
+        public int IdZaposlenik { get; set; }
 
     }
 }
