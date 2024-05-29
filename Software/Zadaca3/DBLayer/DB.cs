@@ -13,13 +13,13 @@ namespace DBLayer
         User=PI2324_tcosic22_User; Password=-t0nGBJl";
         private static SqlConnection _connection;
 
-        public static void OpenConnection()
+        public static void UspostaviVezu()
         {
             _connection = new SqlConnection(_connectionString);
             _connection.Open();
         }
 
-        public static void CloseConnection()
+        public static void ZatvoriVezu()
         {
             if (_connection.State != System.Data.ConnectionState.Closed)
             {
@@ -27,13 +27,13 @@ namespace DBLayer
             }
         }
 
-        public static SqlDataReader GetDataReader(string query)
+        public static SqlDataReader DohvatiCitac(string query)
         {
             SqlCommand command = new SqlCommand(query, _connection);
             return command.ExecuteReader();
         }
 
-        public static int ExecuteCommand(string sqlCommand)
+        public static int IzvrsiNaredbu(string sqlCommand)
         {
             SqlCommand command = new SqlCommand(sqlCommand, _connection);
             return command.ExecuteNonQuery();
