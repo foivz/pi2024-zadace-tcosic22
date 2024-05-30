@@ -55,7 +55,10 @@ namespace Zadaca3
             {
                 if(txtUsername.Text == username && txtPassword.Text == password)
                 {
-                    MessageBox.Show("Dobrodošli, Ana Larić! Uspješno ste prijavljeni.", "Uspješna prijava", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    FrmNarudzbe frmNarudzbe = new FrmNarudzbe();
+                    Hide();
+                    frmNarudzbe.ShowDialog();
+                    Close();
                 }
 
                 else
@@ -63,6 +66,11 @@ namespace Zadaca3
                     MessageBox.Show("Uneseni krivi korisnički podaci!", "Upozorenje", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void FrmLogin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

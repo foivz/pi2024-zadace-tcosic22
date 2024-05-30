@@ -52,6 +52,12 @@
     <Compile Include="FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmNarudzbe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmNarudzbe.Designer.cs">
+      <DependentUpon>FrmNarudzbe.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\Narudzba.cs" />
     <Compile Include="Models\Osoba.cs" />
     <Compile Include="Models\Zaposlenik.cs" />
@@ -60,6 +66,9 @@
     <Compile Include="Repositories\RepozitorijNarudzba.cs" />
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmNarudzbe.resx">
+      <DependentUpon>FrmNarudzbe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -53,14 +53,14 @@ namespace Zadaca3.Repositories
 
         private static Narudzba StvoriObjekt(SqlDataReader citac)
         {
-            int idStudent = int.Parse(citac["IdStudenta"].ToString());
-            int idMeni = int.Parse(citac["OdabraniMeni"].ToString());
+            int idStudent = int.Parse(citac["IDstudenta"].ToString());
+            int idMeni = int.Parse(citac["IDmenija"].ToString());
             string vrijeme = citac["VrijemePripreme"].ToString();
             double cijena = double.Parse(citac["Cijena"].ToString());
             string status = citac["Status"].ToString();
             string kupon = citac["IskoristenKupon"].ToString();
             string datum = citac["Datum"].ToString();
-            int idZaposlen = int.Parse(citac["IdZaposlenika"].ToString());
+            int idZaposlen = int.Parse(citac["IDzaposlenika"].ToString());
 
             var narudzba = new Narudzba
             {
