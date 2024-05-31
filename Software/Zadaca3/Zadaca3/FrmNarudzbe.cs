@@ -19,7 +19,7 @@ namespace Zadaca3
             InitializeComponent();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvNarudzbe_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
@@ -33,6 +33,23 @@ namespace Zadaca3
         {
             List<Narudzba> narudzbe = RepozitorijNarudzba.DohvatiNarudzbe();
             dgvNarudzbe.DataSource = narudzbe;
+        }
+
+        private void btnDodaj_Click(object sender, EventArgs e)
+        {
+            FrmDodavanje frmDodavanje = new FrmDodavanje();
+            frmDodavanje.ShowDialog();
+        }
+
+        private void btnPromjena_Click(object sender, EventArgs e)
+        {
+            FrmPromjena frmPromjena = new FrmPromjena();
+            frmPromjena.ShowDialog();
+        }
+
+        private void btnIzbrisi_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
