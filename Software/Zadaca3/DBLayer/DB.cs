@@ -11,7 +11,7 @@ namespace DBLayer
     {
         private static string _connectionString = @"Data Source=31.147.206.65\PISERVER,1433; Initial Catalog=PI2324_tcosic22_DB;
         User=PI2324_tcosic22_User; Password=-t0nGBJl";
-        public static SqlConnection _connection;
+        private static SqlConnection _connection;
 
         public static void UspostaviVezu()
         {
@@ -33,10 +33,9 @@ namespace DBLayer
             return command.ExecuteReader();
         }
 
-        public static int IzvrsiNaredbu(string sqlCommand)
+        public static SqlConnection VratiVezu()
         {
-            SqlCommand command = new SqlCommand(sqlCommand, _connection);
-            return command.ExecuteNonQuery();
+            return _connection;
         }
     }
 }

@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DBLayer;
 using Zadaca3.Models;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Zadaca3.Repositories
 {
@@ -84,7 +85,7 @@ namespace Zadaca3.Repositories
            
             DB.UspostaviVezu();
 
-            using (SqlCommand command = new SqlCommand(sql, DB._connection))
+            using (SqlCommand command = new SqlCommand(sql, DB.VratiVezu()))
             {
                 command.Parameters.AddWithValue("@IDstudenta", narudzba.IdStudenta);
                 command.Parameters.AddWithValue("@IDmenija", narudzba.OdabraniMeni);
@@ -97,7 +98,25 @@ namespace Zadaca3.Repositories
 
                 command.ExecuteNonQuery();
             }
+            DB.ZatvoriVezu();
+        }
 
+        public static void PromijeniStatus(int idStudent, int idMeni, string vrijeme, string status)
+        {
+            string sql = "UPDATE Narudzba" +
+                " SET Vrijemepripreme = @Vrijemepripreme, Status = @Status WHERE IDstudenta = @IDstudenta AND IDmenija = @IDmenija";
+
+            DB.UspostaviVezu();
+
+            using (SqlCommand command = new SqlCommand(sql, DB.VratiVezu()))
+            {
+                command.Parameters.AddWithValue("@IDstudenta", idStudent);
+                command.Parameters.AddWithValue("@IDmenija", idMeni);
+                command.Parameters.AddWithValue("@Vrijemepripreme", vrijeme);
+                command.Parameters.AddWithValue("@Status", status);
+
+                command.ExecuteNonQuery();
+            }
             DB.ZatvoriVezu();
         }
     }

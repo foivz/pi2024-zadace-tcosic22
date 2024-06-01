@@ -50,7 +50,13 @@ namespace Zadaca3
         private void btnPromjena_Click(object sender, EventArgs e)
         {
             FrmPromjena frmPromjena = new FrmPromjena();
+            frmPromjena.StatusIzmjenjen += FrmStatusIzmjenjen;
             frmPromjena.ShowDialog();
+        }
+
+        private void FrmStatusIzmjenjen(object sender, EventArgs e)
+        {
+            PrikaziNarudzbe();
         }
 
         private void btnIzbrisi_Click(object sender, EventArgs e)
