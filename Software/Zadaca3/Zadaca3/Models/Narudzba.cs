@@ -13,8 +13,8 @@ namespace Zadaca3.Models
         public string VrijemePripreme { get; set; }
         public double Cijena { get; set; }
         public string Status { get; set; }
-        public string IskoristenKupon { get; set; }
         public string Datum { get; set; }
+        public string IskoristenKupon { get; set; }
         public int IdZaposlenik { get; set; }
 
     }

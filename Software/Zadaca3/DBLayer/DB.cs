@@ -11,7 +11,7 @@ namespace DBLayer
     {
         private static string _connectionString = @"Data Source=31.147.206.65\PISERVER,1433; Initial Catalog=PI2324_tcosic22_DB;
         User=PI2324_tcosic22_User; Password=-t0nGBJl";
-        private static SqlConnection _connection;
+        public static SqlConnection _connection;
 
         public static void UspostaviVezu()
         {

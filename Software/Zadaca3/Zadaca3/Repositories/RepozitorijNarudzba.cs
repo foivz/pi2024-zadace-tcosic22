@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -58,8 +59,8 @@ namespace Zadaca3.Repositories
             string vrijeme = citac["VrijemePripreme"].ToString();
             double cijena = double.Parse(citac["Cijena"].ToString());
             string status = citac["Status"].ToString();
-            string kupon = citac["IskoristenKupon"].ToString();
             string datum = citac["Datum"].ToString();
+            string kupon = citac["IskoristenKupon"].ToString();
             int idZaposlen = int.Parse(citac["IDzaposlenika"].ToString());
 
             var narudzba = new Narudzba
@@ -69,12 +70,35 @@ namespace Zadaca3.Repositories
                 VrijemePripreme = vrijeme,
                 Cijena = cijena,
                 Status = status,
-                IskoristenKupon = kupon,
                 Datum = datum,
+                IskoristenKupon = kupon,
                 IdZaposlenik = idZaposlen
             };
 
             return narudzba;
+        }
+
+        public static void DodajNarudzbu(Narudzba narudzba)
+        {
+           string sql = "INSERT INTO Narudzba VALUES (@IDstudenta, @IDmenija, @Vrijemepripreme, @Cijena, @Status, @Datum, @Iskoristenkupon, @IDzaposlenika)";
+           
+            DB.UspostaviVezu();
+
+            using (SqlCommand command = new SqlCommand(sql, DB._connection))
+            {
+                command.Parameters.AddWithValue("@IDstudenta", narudzba.IdStudenta);
+                command.Parameters.AddWithValue("@IDmenija", narudzba.OdabraniMeni);
+                command.Parameters.AddWithValue("@Vrijemepripreme", narudzba.VrijemePripreme);
+                command.Parameters.AddWithValue("@Cijena", narudzba.Cijena);
+                command.Parameters.AddWithValue("@Status", narudzba.Status);
+                command.Parameters.AddWithValue("@Iskoristenkupon", narudzba.IskoristenKupon);
+                command.Parameters.AddWithValue("@Datum", narudzba.Datum);
+                command.Parameters.AddWithValue("@IDzaposlenika", narudzba.IdZaposlenik);
+
+                command.ExecuteNonQuery();
+            }
+
+            DB.ZatvoriVezu();
         }
     }
 }

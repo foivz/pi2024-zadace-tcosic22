@@ -28,9 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtVrijeme = new System.Windows.Forms.TextBox();
             this.txtCijena = new System.Windows.Forms.TextBox();
-            this.txtDatum = new System.Windows.Forms.TextBox();
             this.txtKupon = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -41,39 +39,24 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.btnDodaj = new System.Windows.Forms.Button();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
             this.label8 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
+            this.txtStudent = new System.Windows.Forms.TextBox();
+            this.txtMeni = new System.Windows.Forms.TextBox();
+            this.txtZaposlenik = new System.Windows.Forms.TextBox();
+            this.dtpDatum = new System.Windows.Forms.DateTimePicker();
+            this.Vrijeme = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
-            // 
-            // txtVrijeme
-            // 
-            this.txtVrijeme.Location = new System.Drawing.Point(417, 42);
-            this.txtVrijeme.Name = "txtVrijeme";
-            this.txtVrijeme.Size = new System.Drawing.Size(100, 20);
-            this.txtVrijeme.TabIndex = 2;
             // 
             // txtCijena
             // 
-            this.txtCijena.Location = new System.Drawing.Point(417, 101);
+            this.txtCijena.Location = new System.Drawing.Point(454, 97);
             this.txtCijena.Name = "txtCijena";
             this.txtCijena.Size = new System.Drawing.Size(100, 20);
             this.txtCijena.TabIndex = 3;
             // 
-            // txtDatum
-            // 
-            this.txtDatum.Location = new System.Drawing.Point(138, 211);
-            this.txtDatum.Name = "txtDatum";
-            this.txtDatum.Size = new System.Drawing.Size(100, 20);
-            this.txtDatum.TabIndex = 5;
-            // 
             // txtKupon
             // 
-            this.txtKupon.Location = new System.Drawing.Point(417, 211);
+            this.txtKupon.Location = new System.Drawing.Point(454, 207);
             this.txtKupon.Name = "txtKupon";
             this.txtKupon.Size = new System.Drawing.Size(100, 20);
             this.txtKupon.TabIndex = 6;
@@ -99,7 +82,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(315, 45);
+            this.label3.Location = new System.Drawing.Point(315, 40);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(87, 13);
             this.label3.TabIndex = 9;
@@ -108,7 +91,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(315, 104);
+            this.label4.Location = new System.Drawing.Point(315, 100);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(39, 13);
             this.label4.TabIndex = 10;
@@ -117,7 +100,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(315, 162);
+            this.label5.Location = new System.Drawing.Point(315, 158);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(40, 13);
             this.label5.TabIndex = 11;
@@ -126,7 +109,7 @@
             // cboStatus
             // 
             this.cboStatus.FormattingEnabled = true;
-            this.cboStatus.Location = new System.Drawing.Point(417, 159);
+            this.cboStatus.Location = new System.Drawing.Point(454, 155);
             this.cboStatus.Name = "cboStatus";
             this.cboStatus.Size = new System.Drawing.Size(100, 21);
             this.cboStatus.TabIndex = 12;
@@ -144,7 +127,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(315, 214);
+            this.label7.Location = new System.Drawing.Point(315, 210);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(88, 13);
             this.label7.TabIndex = 14;
@@ -152,34 +135,13 @@
             // 
             // btnDodaj
             // 
-            this.btnDodaj.Location = new System.Drawing.Point(241, 277);
+            this.btnDodaj.Location = new System.Drawing.Point(245, 320);
             this.btnDodaj.Name = "btnDodaj";
             this.btnDodaj.Size = new System.Drawing.Size(100, 41);
             this.btnDodaj.TabIndex = 15;
             this.btnDodaj.Text = "Dodaj";
             this.btnDodaj.UseVisualStyleBackColor = true;
             this.btnDodaj.Click += new System.EventHandler(this.btnDodaj_Click);
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(138, 38);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(100, 20);
-            this.numericUpDown1.TabIndex = 16;
-            // 
-            // numericUpDown2
-            // 
-            this.numericUpDown2.Location = new System.Drawing.Point(138, 95);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(100, 20);
-            this.numericUpDown2.TabIndex = 17;
-            // 
-            // numericUpDown3
-            // 
-            this.numericUpDown3.Location = new System.Drawing.Point(138, 154);
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(100, 20);
-            this.numericUpDown3.TabIndex = 18;
             // 
             // label8
             // 
@@ -190,15 +152,53 @@
             this.label8.TabIndex = 19;
             this.label8.Text = "ID zaposlenika:";
             // 
+            // txtStudent
+            // 
+            this.txtStudent.Location = new System.Drawing.Point(138, 37);
+            this.txtStudent.Name = "txtStudent";
+            this.txtStudent.Size = new System.Drawing.Size(100, 20);
+            this.txtStudent.TabIndex = 20;
+            // 
+            // txtMeni
+            // 
+            this.txtMeni.Location = new System.Drawing.Point(138, 94);
+            this.txtMeni.Name = "txtMeni";
+            this.txtMeni.Size = new System.Drawing.Size(100, 20);
+            this.txtMeni.TabIndex = 21;
+            // 
+            // txtZaposlenik
+            // 
+            this.txtZaposlenik.Location = new System.Drawing.Point(138, 153);
+            this.txtZaposlenik.Name = "txtZaposlenik";
+            this.txtZaposlenik.Size = new System.Drawing.Size(100, 20);
+            this.txtZaposlenik.TabIndex = 22;
+            // 
+            // dtpDatum
+            // 
+            this.dtpDatum.Location = new System.Drawing.Point(138, 208);
+            this.dtpDatum.Name = "dtpDatum";
+            this.dtpDatum.Size = new System.Drawing.Size(134, 20);
+            this.dtpDatum.TabIndex = 23;
+            // 
+            // Vrijeme
+            // 
+            this.Vrijeme.Location = new System.Drawing.Point(417, 40);
+            this.Vrijeme.Name = "Vrijeme";
+            this.Vrijeme.Size = new System.Drawing.Size(137, 20);
+            this.Vrijeme.TabIndex = 24;
+            this.Vrijeme.ValueChanged += new System.EventHandler(this.Vrijeme_ValueChanged);
+            // 
             // FrmDodavanje
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(576, 386);
+            this.Controls.Add(this.Vrijeme);
+            this.Controls.Add(this.dtpDatum);
+            this.Controls.Add(this.txtZaposlenik);
+            this.Controls.Add(this.txtMeni);
+            this.Controls.Add(this.txtStudent);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.numericUpDown3);
-            this.Controls.Add(this.numericUpDown2);
-            this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.btnDodaj);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -209,27 +209,20 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtKupon);
-            this.Controls.Add(this.txtDatum);
             this.Controls.Add(this.txtCijena);
-            this.Controls.Add(this.txtVrijeme);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmDodavanje";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dodavanje narudzbe";
             this.Load += new System.EventHandler(this.FrmDodavanje_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.TextBox txtVrijeme;
         private System.Windows.Forms.TextBox txtCijena;
-        private System.Windows.Forms.TextBox txtDatum;
         private System.Windows.Forms.TextBox txtKupon;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -240,9 +233,11 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnDodaj;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtStudent;
+        private System.Windows.Forms.TextBox txtMeni;
+        private System.Windows.Forms.TextBox txtZaposlenik;
+        private System.Windows.Forms.DateTimePicker dtpDatum;
+        private System.Windows.Forms.DateTimePicker Vrijeme;
     }
 }

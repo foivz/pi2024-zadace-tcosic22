@@ -38,7 +38,13 @@ namespace Zadaca3
         private void btnDodaj_Click(object sender, EventArgs e)
         {
             FrmDodavanje frmDodavanje = new FrmDodavanje();
+            frmDodavanje.NarudzbaDodana += FrmNarudzbaDodana;
             frmDodavanje.ShowDialog();
+        }
+
+        private void FrmNarudzbaDodana(object sender, EventArgs e)
+        {
+            PrikaziNarudzbe();
         }
 
         private void btnPromjena_Click(object sender, EventArgs e)
