@@ -119,5 +119,21 @@ namespace Zadaca3.Repositories
             }
             DB.ZatvoriVezu();
         }
+
+        public static void ObrisiNarudzbu(int idStudent, int idMeni)
+        {
+            string sql = "DELETE FROM Narudzba WHERE IDstudenta = @IDstudenta AND IDmenija = @IDmenija";
+
+            DB.UspostaviVezu();
+
+            using (SqlCommand command = new SqlCommand(sql, DB.VratiVezu()))
+            {
+                command.Parameters.AddWithValue("@IDstudenta", idStudent);
+                command.Parameters.AddWithValue("@IDmenija", idMeni);
+
+                command.ExecuteNonQuery();
+            }
+            DB.ZatvoriVezu();
+        }
     }
 }

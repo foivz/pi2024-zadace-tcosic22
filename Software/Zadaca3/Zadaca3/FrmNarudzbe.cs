@@ -38,30 +38,27 @@ namespace Zadaca3
         private void btnDodaj_Click(object sender, EventArgs e)
         {
             FrmDodavanje frmDodavanje = new FrmDodavanje();
-            frmDodavanje.NarudzbaDodana += FrmNarudzbaDodana;
+            frmDodavanje.NarudzbaDodana += OsjveziFormu;
             frmDodavanje.ShowDialog();
-        }
-
-        private void FrmNarudzbaDodana(object sender, EventArgs e)
-        {
-            PrikaziNarudzbe();
         }
 
         private void btnPromjena_Click(object sender, EventArgs e)
         {
             FrmPromjena frmPromjena = new FrmPromjena();
-            frmPromjena.StatusIzmjenjen += FrmStatusIzmjenjen;
+            frmPromjena.StatusIzmjenjen += OsjveziFormu;
             frmPromjena.ShowDialog();
-        }
-
-        private void FrmStatusIzmjenjen(object sender, EventArgs e)
-        {
-            PrikaziNarudzbe();
         }
 
         private void btnIzbrisi_Click(object sender, EventArgs e)
         {
+            FrmBrisanje frmBrisanje = new FrmBrisanje();
+            frmBrisanje.NarudzbaObrisana += OsjveziFormu;
+            frmBrisanje.ShowDialog();
+        }
 
+        private void OsjveziFormu(object sender, EventArgs e)
+        {
+            PrikaziNarudzbe();
         }
     }
 }

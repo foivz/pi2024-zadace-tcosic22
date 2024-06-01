@@ -42,7 +42,7 @@
             // cboStatus
             // 
             this.cboStatus.FormattingEnabled = true;
-            this.cboStatus.Location = new System.Drawing.Point(138, 203);
+            this.cboStatus.Location = new System.Drawing.Point(138, 208);
             this.cboStatus.Name = "cboStatus";
             this.cboStatus.Size = new System.Drawing.Size(121, 21);
             this.cboStatus.TabIndex = 2;
