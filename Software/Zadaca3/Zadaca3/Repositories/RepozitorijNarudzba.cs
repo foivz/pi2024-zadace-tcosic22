@@ -135,5 +135,27 @@ namespace Zadaca3.Repositories
             }
             DB.ZatvoriVezu();
         }
+
+        public static List<Narudzba> PretraziNarudzbe(string status)
+        {
+            List<Narudzba> narudzbe = new List<Narudzba>();
+
+            string sql = $"SELECT * FROM Narudzba WHERE Status = '{status}'";
+
+            DB.UspostaviVezu();
+
+            var citac = DB.DohvatiCitac(sql);
+
+            while (citac.Read())
+            {
+                Narudzba narudzba = StvoriObjekt(citac);
+                narudzbe.Add(narudzba);
+            }
+
+            citac.Close();
+            DB.ZatvoriVezu();
+
+            return narudzbe;
+        }
     }
 }

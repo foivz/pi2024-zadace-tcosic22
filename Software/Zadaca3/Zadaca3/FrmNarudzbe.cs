@@ -27,6 +27,13 @@ namespace Zadaca3
         private void FrmNarudzbe_Load(object sender, EventArgs e)
         {
             PrikaziNarudzbe();
+
+            cboStatus.Items.Add("Zadana");
+            cboStatus.Items.Add("U obradi");
+            cboStatus.Items.Add("Pripremljena");
+            cboStatus.Items.Add("Poslužena");
+
+            cboStatus.SelectedIndex = 0;
         }
 
         private void PrikaziNarudzbe()
@@ -54,6 +61,14 @@ namespace Zadaca3
             FrmBrisanje frmBrisanje = new FrmBrisanje();
             frmBrisanje.NarudzbaObrisana += OsjveziFormu;
             frmBrisanje.ShowDialog();
+        }
+
+        private void btnPretrazi_Click(object sender, EventArgs e)
+        {
+            string status = cboStatus.SelectedItem.ToString();
+
+            List<Narudzba> narudzbe = RepozitorijNarudzba.PretraziNarudzbe(status);
+            dgvNarudzbe.DataSource = narudzbe;
         }
 
         private void OsjveziFormu(object sender, EventArgs e)
