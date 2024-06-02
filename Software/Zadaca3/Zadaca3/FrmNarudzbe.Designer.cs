@@ -59,7 +59,7 @@
             // 
             // btnPromjena
             // 
-            this.btnPromjena.Location = new System.Drawing.Point(226, 351);
+            this.btnPromjena.Location = new System.Drawing.Point(217, 351);
             this.btnPromjena.Name = "btnPromjena";
             this.btnPromjena.Size = new System.Drawing.Size(117, 45);
             this.btnPromjena.TabIndex = 2;
@@ -108,7 +108,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(941, 451);
+            this.ClientSize = new System.Drawing.Size(868, 451);
             this.Controls.Add(this.btnPretrazi);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cboStatus);

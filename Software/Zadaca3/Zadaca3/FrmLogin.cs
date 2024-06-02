@@ -12,8 +12,8 @@ namespace Zadaca3
 {
     public partial class FrmLogin : Form
     {
-        string username = "AnaLaric12";
-        string password = "lozinka1";
+        string username = "korisnik";
+        string password = "lozinka";
         public FrmLogin()
         {
             InitializeComponent();
