@@ -15,7 +15,7 @@ namespace Zadaca3.Repositories
         {
             Zaposlenik zaposlenik = null;
 
-            string sql = $"SELECT * FROM Zaposlenik WHERE IDzaposlenika = '{KorisnickoIme}'";
+            string sql = $"SELECT * FROM Zaposlenik WHERE Korisnickoime = '{KorisnickoIme}'";
             DB.UspostaviVezu();
             var citac = DB.DohvatiCitac(sql);
             if (citac.HasRows)

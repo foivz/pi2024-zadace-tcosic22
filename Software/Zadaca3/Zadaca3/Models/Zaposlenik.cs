@@ -12,5 +12,10 @@ namespace Zadaca3.Models
         public string Lozinka { get; set; }
 
         public string Email { get; set; }
+
+        public bool ProvjeriLozinku(string lozinka)
+        {
+            return Lozinka == lozinka;
+        }
     }
 }

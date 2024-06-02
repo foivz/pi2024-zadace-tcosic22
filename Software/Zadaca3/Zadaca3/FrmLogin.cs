@@ -7,13 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Zadaca3.Models;
+using Zadaca3.Repositories;
 
 namespace Zadaca3
 {
     public partial class FrmLogin : Form
     {
-        string username = "korisnik";
-        string password = "lozinka";
+        public static Zaposlenik UlogiraniZaposlenik { get; set; }
+
         public FrmLogin()
         {
             InitializeComponent();
@@ -33,7 +35,9 @@ namespace Zadaca3
 
             else
             {
-                if(txtUsername.Text == username && txtPassword.Text == password)
+                UlogiraniZaposlenik = RepozitorijZaposlenik.DohvatiZaposlenika(txtUsername.Text);
+
+                if(UlogiraniZaposlenik != null && UlogiraniZaposlenik.ProvjeriLozinku(txtPassword.Text))
                 {
                     FrmNarudzbe frmNarudzbe = new FrmNarudzbe();
                     Hide();

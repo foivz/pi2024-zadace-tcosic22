@@ -82,6 +82,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\RepozitorijNarudzba.cs" />
+    <Compile Include="Repositories\RepozitorijZaposlenik.cs" />
     <EmbeddedResource Include="FrmBrisanje.resx">
       <DependentUpon>FrmBrisanje.cs</DependentUpon>
     </EmbeddedResource>
