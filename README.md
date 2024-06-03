@@ -7,6 +7,10 @@ Ime i prezime | E-mail adresa (FOI) | JMBAG | Github korisničko ime
 ------------  | ------------------- | ----- | ---------------------
 Tomislav Ćosić | tcosic22@foi.hr | 0016161619| tcosic22
 
+## Podaci za prijavu (zaposlenici)
+AnaLaric12 lozinka1
+AnteCaric28 lozinka2
+IvanDren33 lozinka3
 
 ## Opis domene
 Obuhvaća rad studentskog restorana uključujući odrađivanje i evidentiranje narudžbi te ostavljanje recenzija od strane studenata.
